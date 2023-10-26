@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int reverse(int x) {
+        int ret;
+        string s = to_string(x), temp;
+        int size = s.size()-1, j = 0;
+        int t=10;
+        while(x){
+        if(x%t==0){
+            size--;
+            t*=10;
+        }
+        else break;
+    }
+        for(int i = size; i >= 0; i--){
+            temp[i] = s[j];
+            j++;
+        }
+        ret = stoi(temp);
+        if(x<0)ret= ret*(-1);
+        return ret;
+    }
+};
